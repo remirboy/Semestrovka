@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <servlet>
+    <servlet-name>reg</servlet-name>
+    <servlet-class>Registration</servlet-class>
+</servlet>
+
+    <servlet-mapping>
+        <servlet-name>reg</servlet-name>
+        <url-pattern>/reg</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>auth</servlet-name>
+        <servlet-class>Authorization</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>auth</servlet-name>
+        <url-pattern>/auth</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>start</servlet-name>
+        <servlet-class>StartPage</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>start</servlet-name>
+        <url-pattern>/start</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>itementer</servlet-name>
+        <servlet-class>AddNewItem</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>itementer</servlet-name>
+        <url-pattern>/itementer</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>country</servlet-name>
+        <servlet-class>CarsByCountry</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>country</servlet-name>
+        <url-pattern>/country</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>body</servlet-name>
+        <servlet-class>CarsByBody</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>body</servlet-name>
+        <url-pattern>/body</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>itemSearch</servlet-name>
+        <servlet-class>ItemSearchByName</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>itemSearch</servlet-name>
+        <url-pattern>/itemSearch</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>itemGet</servlet-name>
+        <servlet-class>ItemGet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>itemGet</servlet-name>
+        <url-pattern>/itemGet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>itemGetByCarId</servlet-name>
+        <servlet-class>ItemGetByCarId</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>itemGetByCarId</servlet-name>
+        <url-pattern>/item</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>itemListGet</servlet-name>
+        <servlet-class>GetItemList</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>itemListGet</servlet-name>
+        <url-pattern>/itemList</url-pattern>
+    </servlet-mapping>
+
+
+
+</web-app>

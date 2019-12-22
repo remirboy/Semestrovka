@@ -49,7 +49,6 @@ public class ItemDAO implements DAO<Item> {
         try {
             DBConnector dbConnector = new DBConnector();
             PreparedStatement statement = dbConnector.getConnection().prepareStatement(select);
-            System.out.println(statement);;
             resSet = statement.executeQuery();
             int car_id = 0 ;
             while (resSet.next()) {
@@ -59,9 +58,6 @@ public class ItemDAO implements DAO<Item> {
                     return car_id;
                 }
             }
-            System.out.println("car id"+car_id);
-
-
         } catch (InstantiationException | InvocationTargetException | NoSuchMethodException | SQLException | IllegalAccessException | ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -103,8 +99,6 @@ public class ItemDAO implements DAO<Item> {
         try {
             DBConnector dbConnector = new DBConnector();
             PreparedStatement statement = dbConnector.getConnection().prepareStatement(select);
-            System.out.println(statement);
-            System.out.println(car.getCar_name());
             resSet = statement.executeQuery();
             ArrayList <String> text = new  ArrayList<>();
             while (resSet.next()) {
@@ -115,7 +109,6 @@ public class ItemDAO implements DAO<Item> {
                     return text;
                 }
             }
-            System.out.println(text);
         } catch (InstantiationException | InvocationTargetException | NoSuchMethodException | SQLException | IllegalAccessException | ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -161,7 +154,23 @@ public class ItemDAO implements DAO<Item> {
 
     @Override
     public void update(Item item) {
-
+        try {
+            DBConnector dbConnector = new DBConnector();
+            PreparedStatement preparedStatement =dbConnector.getConnection().prepareStatement("UPDATE item SET text='"+item.getContent()+"' WHERE item_name='"+item.getItem_name()+"';");
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

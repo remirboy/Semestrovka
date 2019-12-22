@@ -49,18 +49,15 @@ public class Authorization extends HttpServlet {
         String hashedPassword = DigestUtils.md5Hex(password);
         User user = new User(email, hashedPassword);
         UserDAO userDAO = new UserDAO();
-        System.out.println(userDAO.getUserByLogin(user));
-        System.out.println(userDAO.getUserId(user));
         int id = userDAO.getUserId(user);
         user.setUser_id(id);
         if (userDAO.getUserByLogin(user)) {
             HttpSession session = httpServletRequest.getSession();
             session.setAttribute("user", user.getEmail());
             session.setAttribute("id",userDAO.getUserId(user));
-            System.out.println("ID_User: "+id);
         }
         else
-            httpServletRequest.getRequestDispatcher("WEB-INF\\Authorization.jsp").forward(httpServletRequest, httpServletResponse);
+            httpServletRequest.getRequestDispatcher("WEB-INF\\AuthorizationFaile.jsp").forward(httpServletRequest, httpServletResponse);
     }
 
 }

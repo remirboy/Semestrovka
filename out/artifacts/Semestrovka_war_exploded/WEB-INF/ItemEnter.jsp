@@ -8,13 +8,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Создание статьи</title>
+    <title>Item's creation</title>
     <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css\logo.css">
     <link rel="stylesheet" type="text/css" href="css\Mainpage.css">
     <link rel="stylesheet" type="text/css" href="css\bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css\enter.css">
     <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <script type="text/javascript" src="JS\CarsValid.js"></script>
 </head>
 <body>
 <div id="nav">
@@ -40,15 +41,6 @@
                 <tbody>
                 <tr>
                     <th colspan="2" class="infobox-above" style="background:#cfe3ff;">Название автомобиля<p><input type="text" name="car_name"></p></th>
-            </tr>
-            <tr>
-                <td colspan="2" class="infobox-image" style="">
-						<span class="no-wikidata" data-wikidata-property-id="P18">
-							<a href="" class="image">
-							<img alt="" src="" decoding="async" elementtiming="thumbnail-top" width="305" height="203" srcset="" data-file-width="5436" data-file-height="3624">
-							</a>
-						</span>
-                </td>
             </tr>
             <tr>
                 <th class="plainlist">Power (h.p.)</th>
@@ -115,8 +107,7 @@
             <p><b>Write about auto here:</b></p>
             <textarea cols="100" name="item"> </textarea>
             <div class="btn-group" role="group" arealabel="Basic">
-                    <button class="navbar navbar-dark bg-primary" type="button" name="button-loader">&dArr;Загузить картинку</button>
-                    <button class="navbar navbar-dark bg-primary"  type="submit" name="button-item" onclick="valid(document.getElementById('form'))" >Save item</button>
+                    <button class="navbar navbar-dark bg-primary"  type="submit" name="button-item" onclick="valid(document.getElementById('item'))" >Save item</button>
             </div>
         </div>
     </form>

@@ -6,7 +6,77 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84a6f4c6-0cef-410b-87de-f8e7d60dddb2" name="Default Changelist" comment="" />
+    <list default="true" id="84a6f4c6-0cef-410b-87de-f8e7d60dddb2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DeleteUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ItemUpdate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/LogOut.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/JS/CarsValid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/AuthorizationFaile.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/DuplicateItem.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/ItemSearchFaile.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/ItemUpdate.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/LogOut.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/RegistrationFaile.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/UserDelete.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/includes/update_item.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/update.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4032db51-905d-4c91-ae87-b1a30dc09116.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4032db51-905d-4c91-ae87-b1a30dc09116.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Semestrovka_war_exploded/WEB-INF/Body.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Semestrovka_war_exploded/WEB-INF/Country.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Semestrovka_war_exploded/WEB-INF/Item.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Semestrovka_war_exploded/WEB-INF/Item.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Semestrovka_war_exploded/WEB-INF/ItemEnter.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Semestrovka_war_exploded/WEB-INF/ItemEnter.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Semestrovka_war_exploded/WEB-INF/ItemsList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Semestrovka_war_exploded/WEB-INF/ItemsList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Semestrovka_war_exploded/WEB-INF/classes/AddNewItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Semestrovka_war_exploded/WEB-INF/classes/AddNewItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Semestrovka_war_exploded/WEB-INF/classes/Authorization.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Semestrovka_war_exploded/WEB-INF/classes/Authorization.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Semestrovka_war_exploded/WEB-INF/classes/CarsByBody.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Semestrovka_war_exploded/WEB-INF/classes/CarsByCountry.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Semestrovka_war_exploded/WEB-INF/classes/DB/DAO/CarDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Semestrovka_war_exploded/WEB-INF/classes/DB/DAO/CarDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Semestrovka_war_exploded/WEB-INF/classes/DB/DAO/ItemDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Semestrovka_war_exploded/WEB-INF/classes/DB/DAO/ItemDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Semestrovka_war_exploded/WEB-INF/classes/DB/DAO/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Semestrovka_war_exploded/WEB-INF/classes/DB/DAO/UserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Semestrovka_war_exploded/WEB-INF/classes/ItemGet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Semestrovka_war_exploded/WEB-INF/classes/ItemGet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Semestrovka_war_exploded/WEB-INF/classes/ItemGetByCarId.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Semestrovka_war_exploded/WEB-INF/classes/ItemGetByCarId.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Semestrovka_war_exploded/WEB-INF/classes/Registration.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Semestrovka_war_exploded/WEB-INF/classes/Registration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Semestrovka_war_exploded/WEB-INF/classes/StartPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Semestrovka_war_exploded/WEB-INF/classes/StartPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Semestrovka_war_exploded/WEB-INF/includes/head_logined.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Semestrovka_war_exploded/WEB-INF/includes/head_logined.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Semestrovka_war_exploded/WEB-INF/includes/logined_listener.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Semestrovka_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Semestrovka_war_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Semestrovka_war_exploded/css/enter.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Semestrovka_war_exploded/css/enter.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AddNewItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AddNewItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Authorization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Authorization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CarsByBody.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CarsByCountry.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DB/DAO/CarDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DB/DAO/CarDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DB/DAO/ItemDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DB/DAO/ItemDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DB/DAO/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DB/DAO/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ItemGet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ItemGet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ItemGetByCarId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ItemGetByCarId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Registration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StartPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/AddNewItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AddNewItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Authorization.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Authorization.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/CarsByBody.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/CarsByCountry.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DB/DAO/CarDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DB/DAO/CarDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DB/DAO/ItemDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DB/DAO/ItemDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DB/DAO/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DB/DAO/UserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ItemGet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ItemGet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ItemGetByCarId.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ItemGetByCarId.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Registration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Registration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/StartPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/StartPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/Body.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/Country.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/Item.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/Item.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/ItemEnter.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/ItemEnter.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/ItemsList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/ItemsList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/Registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/Registration.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/includes/head_logined.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/includes/head_logined.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/includes/logined_listener.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/enter.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/enter.css" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,13 +110,6 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="auto_fan: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="auto_fan" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="auto_fan: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="item: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
@@ -54,11 +117,16 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="JavaScript File" />
-        <option value="Jsp File" />
+        <option value="jsf" />
         <option value="Class" />
+        <option value="Jsp File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -75,9 +143,11 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.35" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -87,10 +157,13 @@
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\REMIR\IdeaProjects\Semestrovka\web\WEB-INF" />
       <recent name="C:\Users\REMIR\IdeaProjects\Semestrovka\src\main" />
       <recent name="C:\Users\REMIR\IdeaProjects\Semestrovka\web\Images" />
-      <recent name="C:\Users\REMIR\IdeaProjects\Semestrovka\web\WEB-INF" />
       <recent name="C:\Users\REMIR\IdeaProjects\Semestrovka\src\main\java" />
     </key>
   </component>
@@ -188,12 +261,12 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@6e2e24a1" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@2dc392c2" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@6e2e24a1" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@3239d428" type="9fbbdea:ServiceModel$ServiceNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@2dc392c2" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@f90312f" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
           </expand>
           <select />
@@ -228,10 +301,39 @@
       <workItem from="1574831697556" duration="13508000" />
       <workItem from="1574869730955" duration="40504000" />
       <workItem from="1575004985629" duration="16016000" />
+      <workItem from="1575056738559" duration="4604000" />
+      <workItem from="1575107888599" duration="3801000" />
+      <workItem from="1575142714666" duration="4877000" />
+      <workItem from="1575211013623" duration="58000" />
+      <workItem from="1575271348449" duration="13500000" />
+      <workItem from="1575311093311" duration="3242000" />
+      <workItem from="1575352667316" duration="530000" />
+      <workItem from="1575360545654" duration="2310000" />
+      <workItem from="1575463813325" duration="626000" />
+      <workItem from="1575490487613" duration="5204000" />
+      <workItem from="1575538273195" duration="5000" />
+      <workItem from="1575882663702" duration="2055000" />
+      <workItem from="1576314151138" duration="620000" />
+      <workItem from="1576486808374" duration="4331000" />
+      <workItem from="1576749583252" duration="1500000" />
+      <workItem from="1576829882782" duration="670000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

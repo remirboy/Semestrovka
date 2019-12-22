@@ -7,7 +7,7 @@
     <servlet>
     <servlet-name>reg</servlet-name>
     <servlet-class>Registration</servlet-class>
-</servlet>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>reg</servlet-name>
@@ -44,25 +44,6 @@
         <url-pattern>/itementer</url-pattern>
     </servlet-mapping>
 
-    <servlet>
-        <servlet-name>country</servlet-name>
-        <servlet-class>CarsByCountry</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>country</servlet-name>
-        <url-pattern>/country</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>body</servlet-name>
-        <servlet-class>CarsByBody</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>body</servlet-name>
-        <url-pattern>/body</url-pattern>
-    </servlet-mapping>
 
     <servlet>
         <servlet-name>itemSearch</servlet-name>
@@ -95,15 +76,44 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>itemListGet</servlet-name>
-        <servlet-class>GetItemList</servlet-class>
-    </servlet>
+    <servlet-name>itemListGet</servlet-name>
+    <servlet-class>GetItemList</servlet-class>
+</servlet>
 
     <servlet-mapping>
         <servlet-name>itemListGet</servlet-name>
         <url-pattern>/itemList</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>logOut</servlet-name>
+        <servlet-class>LogOut</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>logOut</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>delete</servlet-name>
+        <servlet-class>DeleteUser</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>delete</servlet-name>
+        <url-pattern>/deleteUser</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>update</servlet-name>
+        <servlet-class>ItemUpdate</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>update</servlet-name>
+        <url-pattern>/itemUpdate</url-pattern>
+    </servlet-mapping>
 
 
 </web-app>

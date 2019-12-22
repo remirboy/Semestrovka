@@ -21,13 +21,10 @@ public class ItemGetByCarId extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws ServletException, IOException {
         try {
-            System.out.println(httpServletRequest.getParameter("id"));
             ItemDAO itemDAO = new ItemDAO();
             Car car = new Car();
             car.setCar_id(Integer.parseInt(httpServletRequest.getParameter("id")));
-            System.out.println(car.getCar_id());
             CarDAO carDAO = new CarDAO();
-            System.out.println("dasdsadsa"+car.getCar_id());
             ArrayList<String> par;
             par = carDAO.getCarParametrsById(car);
             Item item = new Item();

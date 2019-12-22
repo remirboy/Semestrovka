@@ -41,8 +41,10 @@ public class UserDAO implements  DAO<User>{
                 preparedStatement.setString(2, user.getPassword());
                 preparedStatement.setString(3,user.getRole());
                preparedStatement.executeUpdate();
-            } catch (InstantiationException | InvocationTargetException | NoSuchMethodException | SQLException | IllegalAccessException | ClassNotFoundException e) {
+            } catch (InstantiationException | InvocationTargetException | NoSuchMethodException  | IllegalAccessException | ClassNotFoundException e) {
                 e.printStackTrace();
+            }catch (SQLException e){
+                System.out.println("Already exists");
             }
 
 
@@ -68,33 +70,55 @@ public class UserDAO implements  DAO<User>{
 
     @Override
     public void delete(User user) {
+        delete(user.getUser_id());
 
     }
+
+
+
+    public void delete(int id) {
+        try {
+            PreparedStatement preparedStatement = dbConnector.getConnection().prepareStatement(
+                    "DELETE FROM user WHERE user_id=?;"
+            );
+            preparedStatement.setInt(1, id);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     public boolean getUserByLogin(User user) throws NoSuchMethodException, IllegalAccessException, InstantiationException, SQLException, InvocationTargetException, ClassNotFoundException {
         String select = "SELECT * FROM " + Table.user +" WHERE " + UserTable.email + "= '"+user.getEmail()+"'  AND "+UserTable.password+" = '"+user.getPassword()+"' ;";
         ResultSet resSet = null;
         try {
             PreparedStatement statement = dbConnector.getConnection().prepareStatement(select);
-            System.out.println(statement);
-            System.out.println(user.getEmail());
-            System.out.println(user.getPassword());
             resSet = statement.executeQuery();
             while (resSet.next()) {
                 String email =  resSet.getString("email");
                 String password =  resSet.getString("password");
                 boolean bool =  resSet.wasNull();
                 if(!bool)  {
-                    System.out.print("email: "+ email +",");
-                    System.out.print("password: "+ password+",");
                     return true;
                 }
             }
 
 
-        } catch (InstantiationException | InvocationTargetException | NoSuchMethodException | SQLException | IllegalAccessException | ClassNotFoundException e) {
+        } catch (InstantiationException | InvocationTargetException | NoSuchMethodException  | SQLException| IllegalAccessException | ClassNotFoundException e) {
             e.printStackTrace();
         }
+
         return false;
     }
     public  int getUserId(User user)throws NoSuchMethodException, IllegalAccessException, InstantiationException, SQLException, InvocationTargetException, ClassNotFoundException{
@@ -102,13 +126,9 @@ public class UserDAO implements  DAO<User>{
         ResultSet resSet = null;
         try {
             PreparedStatement statement = dbConnector.getConnection().prepareStatement(select);
-            System.out.println(statement);
-            System.out.println(user.getEmail());
-            System.out.println(user.getPassword());
             resSet = statement.executeQuery();
             while (resSet.next()) {
                 int id =  resSet.getInt("user_id");
-                System.out.println(id);
                 boolean bool =  resSet.wasNull();
                 if(!bool)  {
                     return id;

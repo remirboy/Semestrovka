@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="css\Mainpage.css">
     <link rel="stylesheet" type="text/css" href="css\bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css\enter.css">
+    <link rel="stylesheet" type="text/css" href="css\navigation.css">
     <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
 </head>
 <body>
@@ -34,15 +35,12 @@
 </div>
 </nav>
 </div>
-<div>
+<div id="main">
+    <h5>Items in AUTOFAN. The first item in list are more new.</h5>
    <%
     ItemDAO itemDAO = new ItemDAO();
       out.println(itemDAO.ItemListGET());
    %>
-
-
-
-
 </div>
 </body>
 </html>

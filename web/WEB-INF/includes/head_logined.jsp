@@ -14,4 +14,6 @@
             out.println( request.getSession().getAttribute("id"));%></a>
     </p><br/>
     <button class="btn btn-outline-dark btn-sm" type="button"><a href="itementer">&#9998;</a></button>
+    <button  class="btn btn-outline-dark btn-sm" type="button"><a href="deleteUser">Delete me</a></button>
+    <button  class="btn btn-outline-dark btn-sm" type="button"><a href="logout">LogOut</a></button>
 </header>

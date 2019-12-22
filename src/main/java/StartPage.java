@@ -8,7 +8,9 @@ import java.io.IOException;
 public class StartPage extends HttpServlet{
     @Override
     protected void doPost(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws ServletException, IOException {
-        super.doPost(httpServletRequest, httpServletResponse);
+        httpServletRequest.getSession().removeAttribute("user");
+        httpServletRequest.getSession().removeAttribute("id");
+        httpServletRequest.getRequestDispatcher("WEB-INF\\StartPage.jsp").forward(httpServletRequest, httpServletResponse);
     }
 
     @Override

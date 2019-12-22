@@ -18,7 +18,6 @@ import java.util.regex.Pattern;
 public class AddNewItem extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws ServletException, IOException {
-        String help="";
         String car_name = httpServletRequest.getParameter("car_name");
         String power = httpServletRequest.getParameter("power");
         String weight = httpServletRequest.getParameter("weight");
@@ -30,7 +29,7 @@ public class AddNewItem extends HttpServlet {
         String item_name = httpServletRequest.getParameter("name");
         String text = httpServletRequest.getParameter("item");
         try {
-            dataCheck(car_name, power, weight,max_speed, waste, acceleration, country, body, text, item_name, httpServletResponse, httpServletRequest, help);
+            dataCheck(car_name, power, weight,max_speed, waste, acceleration, country, body, text, item_name, httpServletResponse, httpServletRequest);
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
         } catch (InstantiationException e) {
@@ -43,26 +42,24 @@ public class AddNewItem extends HttpServlet {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
+        } catch (NullPointerException e){
+            httpServletRequest.getRequestDispatcher("WEB-INF\\DuplicateItem.jsp").forward(httpServletRequest, httpServletResponse);
         }
     }
 
     private static void dataCheck(String car_name , String power ,  String weight , String max_speed,String waste,
-                                  String acceleration,String country, String body, String text,String name, HttpServletResponse response, HttpServletRequest request, String help)
+                                  String acceleration,String country, String body, String text,String name, HttpServletResponse response, HttpServletRequest request)
             throws ServletException, IOException, NoSuchMethodException, InstantiationException, SQLException, IllegalAccessException, InvocationTargetException, ClassNotFoundException {
         boolean correct_data = true;
-//        String pattern = "^[0-9]*";
-//        Pattern patternnumber = Pattern.compile(pattern);
-//        Matcher matcherPower = patternnumber.matcher(power);
-//        Matcher matcherWeight = patternnumber.matcher(weight);
-//        Matcher matcherSpeed = patternnumber.matcher(max_speed);
-//        Matcher matcherWaste = patternnumber.matcher(waste);
-//        Matcher matcherAcceleration = patternnumber.matcher(acceleration);
-//   help+="Conditions not met: "; System.out.println(matcherPower.matches());
-//        if ((!matcherPower.matches())||(!matcherWeight.matches())||(!matcherSpeed.matches())||(!matcherWaste.matches())||(!matcherAcceleration.matches()))  correct_data=false;
-//
+        String pattern = "^[0-9]*";
+        Pattern patternnumber = Pattern.compile(pattern);
+        Matcher matcherPower = patternnumber.matcher(power);
+        Matcher matcherWeight = patternnumber.matcher(weight);
+        Matcher matcherSpeed = patternnumber.matcher(max_speed);
+        Matcher matcherWaste = patternnumber.matcher(waste);
+        Matcher matcherAcceleration = patternnumber.matcher(acceleration);
+        if ((!matcherPower.matches())||(!matcherWeight.matches())||(!matcherSpeed.matches())||(!matcherWaste.matches())||(!matcherAcceleration.matches()))  correct_data=false;
         if (car_name.equals(" ")) correct_data=false;
-        System.out.println(car_name);
-        System.out.println(correct_data);
         if (correct_data){
             Car car = new Car(car_name,power,max_speed,weight,waste,acceleration,country,body);
             CarDAO carDAO = new CarDAO();
@@ -73,18 +70,13 @@ public class AddNewItem extends HttpServlet {
             User user = new User();
             user.setUser_id((Integer)request.getSession().getAttribute("id"));
             int user_id = user.getUser_id();
-            System.out.println(user_id);
             Item item = new Item(user.getUser_id(),name,text,car.getCar_id());
             ItemDAO itemDAO = new ItemDAO();
             itemDAO.add(item,car,user);
-
             request.getRequestDispatcher("WEB-INF\\StartPage.jsp").forward(request, response);
-            System.out.println("zaebal");
         }
         else{
-            request.getRequestDispatcher("WEB-INF\\ItemInter.jsp").forward(request, response);
-            HttpSession session = request.getSession();
-            session.setAttribute("help", help);
+            request.getRequestDispatcher("WEB-INF\\ItemInterFaile.jsp").forward(request, response);
         }
     }
 

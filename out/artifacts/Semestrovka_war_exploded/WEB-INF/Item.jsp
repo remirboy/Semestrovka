@@ -2,7 +2,8 @@
 <%@ page import="DB.model.Car" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="DB.model.Item" %>
-<%@ page import="DB.DAO.ItemDAO" %><%--
+<%@ page import="DB.DAO.ItemDAO" %>
+<%@ page import="java.sql.SQLException" %><%--
   Created by IntelliJ IDEA.
   User: REMIR
   Date: 28.11.2019
@@ -12,7 +13,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Item</title>
     <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css\Mainpage.css">
     <link rel="stylesheet" type="text/css" href="css\bootstrap.css">
@@ -33,13 +34,14 @@
             <%  }
             else { %>
             <%@include file="includes/head_logined.jsp" %>
-            <%    }
+            <%  }
             %>
         </div>
     </nav>
-</div>
+</div >
 <h1 id="firstHeading" class="firstHeading" lang="ru">
     <b><%
+        try{
         ItemDAO itemDAO = new ItemDAO();
         Car car = new Car();
         car.setCar_id((Integer) request.getSession().getAttribute("car_id"));
@@ -51,18 +53,12 @@
         ArrayList<String> text;
         text = itemDAO.getItemByCarId(car);
         out.print(par.get(0));%>
+        <%if(request.getSession().getAttribute("user") != null) { %>
+        <%@include file="includes/update_item.jsp" %>
+        <%  }
+        %>
     </b>
 </h1>
-<div class="input-group">
-    <%
-        if(request.getSession().getAttribute("user") == null) { %>
-    <%@include file="includes/head_not_logined.jsp" %>
-    <%  }
-    else { %>
-    <%@include file="includes/logined_listener.jsp" %>
-    <%    }
-    %>
-</div>
 <table class="infobox" style="width:25.5em;" data-name="Автомобиль">
     <p align="right">
         <tbody>
@@ -72,24 +68,15 @@
             %></th>
         </tr>
         <tr>
-            <td colspan="2" class="infobox-image" style="">
-						<span class="no-wikidata" data-wikidata-property-id="P18">
-							<a href="//commons.wikimedia.org/wiki/File:VAZ_2101_BW_2016-09-03_13-51-58.jpg?uselang=ru" class="image">
-							<img alt="VAZ 2101 BW 2016-09-03 13-51-58.jpg" src="C:\Users\REMIR\Desktop\Универ\ИКТ\Семестровка\Авто\html\vaz-2101-kopeyka-zhiguli-lada.jpg" decoding="async" elementtiming="thumbnail-top" width="305" height="203" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/VAZ_2101_BW_2016-09-03_13-51-58.jpg/458px-VAZ_2101_BW_2016-09-03_13-51-58.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a4/VAZ_2101_BW_2016-09-03_13-51-58.jpg/610px-VAZ_2101_BW_2016-09-03_13-51-58.jpg 2x" data-file-width="5436" data-file-height="3624">
-							</a>
-						</span>
-            </td>
-        </tr>
-        <tr>
             <th class="plainlist">Power (h.p.)</th>
             <td class="plainlist">
-                <a  title="АвтоВАЗ"><%out.print(par.get(1));%></a>
+                <a><%out.print(par.get(1));%></a>
             </td>
         </tr>
         <tr>
             <th class="plainlist">Weight (kg)</th>
             <td class="plainlist">
-                <a  title="АвтоВАЗ"><%out.print(par.get(2));%></a>
+                <a><%out.print(par.get(2));%></a>
             </td>
         </tr>
         <tr>
@@ -101,32 +88,36 @@
         <tr>
             <th class="plainlist">Waste 100 km/h (l)</th>
             <td class="plainlist">
-                <a title="АвтоВАЗ" name="waste"><%out.print(par.get(4));%></a>
+                <a  name="waste"><%out.print(par.get(4));%></a>
             </td>
         </tr>
         <tr>
             <th class="plainlist">Acceleration about 100 km/h (s)</th>
             <td class="plainlist">
-                <a title="АвтоВАЗ" name="acceleration"><%out.print(par.get(5));%></a>
+                <a name="acceleration"><%out.print(par.get(5));%></a>
             </td>
         </tr>
         <tr>
             <th class="plainlist">Country</th>
             <td class="plainlist">
-                <a title="АвтоВАЗ" name="country"><%out.print(par.get(6));%></a>
+                <a  name="country"><%out.print(par.get(6));%></a>
             </td>
         </tr>
         <tr>
             <th class="plainlist">Body</th>
             <td class="plainlist">
-                <a title="АвтоВАЗ" name="body"><%out.print(par.get(7));%></a>
+                <a  name="body"><%out.print(par.get(7));%></a>
             </td>
         </tr>
         </tbody>
     </p>
 </table>
 <div id="content" name ="content">
-<%out.print(text.get(1));%>
+<%out.print(text.get(1));
+        session.setAttribute("item_name",text.get(0));}
+        catch (NullPointerException e){
+            request.getRequestDispatcher("ItemSearchFaile.jsp").forward(request, response);} %>
+
 </div>
 </body>
 </html>

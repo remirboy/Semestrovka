@@ -61,12 +61,9 @@ public class CarDAO implements  DAO<Car> {
         ResultSet resSet = null;
         try {
             PreparedStatement statement = dbConnector.getConnection().prepareStatement(select);
-            System.out.println(statement);
-            System.out.println(car.getCar_name());
             resSet = statement.executeQuery();
             while (resSet.next()) {
                 int id =  resSet.getInt("car_id");
-                System.out.println(id);
                 boolean bool =  resSet.wasNull();
                 if(!bool)  {
                     return id;
@@ -86,8 +83,6 @@ public class CarDAO implements  DAO<Car> {
         ResultSet resSet = null;
         try {
             PreparedStatement statement = dbConnector.getConnection().prepareStatement(select);
-            System.out.println(statement);
-            System.out.println(car.getCar_name());
             resSet = statement.executeQuery();
             ArrayList<String> arrayList = new ArrayList<>();
             while (resSet.next()) {
@@ -104,7 +99,7 @@ public class CarDAO implements  DAO<Car> {
                     return arrayList;
                 }
             }
-            System.out.println(arrayList);
+
 
 
         } catch (InstantiationException | InvocationTargetException | NoSuchMethodException | SQLException | IllegalAccessException | ClassNotFoundException e) {
@@ -135,14 +130,11 @@ public class CarDAO implements  DAO<Car> {
             ResultSet resSet = null;
             try {
                 PreparedStatement statement = dbConnector.getConnection().prepareStatement(select);
-                System.out.println(statement);
-                System.out.println(car.getCar_name());
                 resSet = statement.executeQuery();
                 while (resSet.next()) {
                     String name = resSet.getString("name");
                     boolean bool = resSet.wasNull();
                     if (!bool) {
-                        System.out.print("name: " + name + ",");
                         return true;
                     }
                 }
